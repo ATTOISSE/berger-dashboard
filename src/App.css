@@ -1,3 +1,131 @@
+.App-img {
+  background: url('../public/images/bergers.webp') no-repeat center center;
+  width: 100%;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.App-img h1{
+    display: block;
+}
+
+*{
+  font-family: 'charm',serif;
+  font-weight: bold;
+}
+
+.bord {
+  border: 2px solid;
+  z-index: 2; 
+}
+
+.App-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+  z-index: 1; /* Place l'overlay au-dessus de l'image */
+}
+
+.App-img * {
+  position: relative; /* Assure que le contenu reste au-dessus de l'overlay */
+  z-index: 2;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+.sidebar a {
+  padding: 15px 20px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+.content {
+  margin-left: 20px;
+  padding: 20px;
+}
+.navbar-brand img {
+  height: 70px;
+  width: 20px;
+  border-radius: 60%;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+.dark-mode .sidebar {
+  background-color: #495057;
+}
+
+.dark-mode .sidebar .nav-link {
+  color: #f8f9fa;
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+
+.sidebar .nav-link {
+  padding: 15px 20px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #e9ecef;
+  color: #007bff;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+nav img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.App-input{
+  width: 30px;
+  border: none;
+  padding-left:10px;
+}
+
+/*---------------------------------------------------------------------------------*/
 .App {
   text-align: center;
 }

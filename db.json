@@ -1,0 +1,230 @@
+{
+  "burgers": [
+    {
+      "name": "Cheese berger",
+      "price": "19.99 ",
+      "description": "berger avec cheese",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "price": 599.95,
+      "name": "Berger simple",
+      "picture": "/images/berger2.jpg",
+      "description": "berger au fromage"
+    },
+    {
+      "id": "3",
+      "price": 15.9,
+      "name": "berger complet",
+      "picture": "/images/berger3.jpg",
+      "description": "salade poulet "
+    },
+    {
+      "id": "4",
+      "price": 799.95,
+      "name": "berger Fruit",
+      "picture": "/images/berger5.jpg",
+      "description": " fruit mayonaise "
+    },
+    {
+      "id": "5ae8",
+      "name": "cheese berger",
+      "price": "3000",
+      "description": "hojooppoj"
+    },
+    {
+      "id": "e5dd",
+      "name": "berg",
+      "price": "15.99",
+      "description": "yundized"
+    },
+    {
+      "name": "pauvre",
+      "price": "9.99",
+      "description": "pauvre berger",
+      "id": "1ea3"
+    },
+    {
+      "name": "berg",
+      "price": "15.99",
+      "description": "berger tomate",
+      "id": "eff6"
+    },
+    {
+      "name": "riche",
+      "price": "300",
+      "description": "berger riche",
+      "id": "e43b"
+    }
+  ],
+  "commandes": [
+    {
+      "id": "fffa",
+      "qtes": {
+        "3": 2
+      },
+      "date": "10-8-2024",
+      "orders": [
+        {
+          "id": "3",
+          "price": 15.9,
+          "name": "berger complet",
+          "picture": "/images/berger3.jpg",
+          "description": "salade poulet "
+        }
+      ],
+      "client": {
+        "id": "290b",
+        "name": "cheese berger",
+        "lastName": "García Flores",
+        "telephone": "5553428400"
+      },
+      "etat": false
+    },
+    {
+      "id": "341e",
+      "qtes": {
+        "1": 1,
+        "2": 3
+      },
+      "date": "10-8-2024",
+      "orders": [
+        {
+          "id": "2",
+          "price": 599.95,
+          "name": "Berger simple",
+          "picture": "/images/berger2.jpg",
+          "description": "berger au fromage"
+        },
+        {
+          "id": "1",
+          "price": 19.99,
+          "name": "Cheese berger",
+          "picture": "/images/berger6.jpg",
+          "description": "berger avec cheese"
+        }
+      ],
+      "client": {
+        "id": "4bc0",
+        "name": "Attoisse",
+        "lastName": "Mohamed",
+        "telephone": "5677778"
+      },
+      "etat": false
+    },
+    {
+      "id": "fade",
+      "qtes": {
+        "3": 1
+      },
+      "date": "10-8-2024",
+      "orders": [
+        {
+          "id": "3",
+          "price": 15.9,
+          "name": "berger complet",
+          "picture": "/images/berger3.jpg",
+          "description": "salade poulet "
+        }
+      ],
+      "client": {
+        "id": "0616",
+        "name": "Fatano",
+        "lastName": "Amal",
+        "telephone": "5553428400"
+      },
+      "etat": false
+    },
+    {
+      "id": "a3b5",
+      "qtes": {
+        "1": 2
+      },
+      "date": "10-8-2024",
+      "orders": [
+        {
+          "id": "1",
+          "price": 19.99,
+          "name": "Cheese berger",
+          "picture": "/images/berger6.jpg",
+          "description": "berger avec cheese"
+        }
+      ],
+      "client": {
+        "id": "7ab6",
+        "name": "key",
+        "lastName": "García Flores",
+        "telephone": "5553428400"
+      },
+      "etat": false
+    },
+    {
+      "id": "7bab",
+      "qtes": {
+        "2": 1
+      },
+      "date": "10-8-2024",
+      "orders": [
+        {
+          "id": "2",
+          "price": 599.95,
+          "name": "Berger simple",
+          "picture": "/images/berger2.jpg",
+          "description": "berger au fromage"
+        }
+      ],
+      "client": {
+        "id": "cbcd",
+        "name": "ATTOISSE Mohamed",
+        "lastName": "García Flores",
+        "telephone": "5553428400"
+      },
+      "etat": false
+    }
+  ],
+  "clients": [
+    {
+      "id": "15a1",
+      "name": "cheese berger",
+      "lastName": "García Flores",
+      "telephone": "5553428400"
+    },
+    {
+      "id": "290b",
+      "name": "cheese berger",
+      "lastName": "García Flores",
+      "telephone": "5553428400"
+    },
+    {
+      "id": "4bc0",
+      "name": "Attoisse",
+      "lastName": "Mohamed",
+      "telephone": "5677778"
+    },
+    {
+      "id": "0616",
+      "name": "Fatano",
+      "lastName": "Amal",
+      "telephone": "5553428400"
+    },
+    {
+      "id": "7ab6",
+      "name": "key",
+      "lastName": "García Flores",
+      "telephone": "5553428400"
+    },
+    {
+      "id": "cbcd",
+      "name": "ATTOISSE Mohamed",
+      "lastName": "García Flores",
+      "telephone": "5553428400"
+    }
+  ],
+  "stats": {
+    "annule": 1,
+    "enCours": 1,
+    "valide": 2,
+    "paye": 2
+  }
+}
