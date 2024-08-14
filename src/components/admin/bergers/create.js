@@ -76,7 +76,7 @@ export function FormBerger() {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="description" className="form-label text-info">Description</label>
-                            <textarea value={description} className={`form-control bg-transparent text-info`} name="description" type="text" id="description" onChange={(e) => setDescription(e.target.value)} rows="4"/>
+                            <textarea value={description} className={`form-control bg-transparent text-info`} name="description" type="text" id="description" onChange={(e) => setDescription(e.target.value)} />
                         </div>
                         <button type="submit" className={`btn btn-${berger.length > 0 ? 'warning' : 'success'} col-3 offset-4`} onClick={(event) => handleAdd(event)}>{berger.length > 0 ? 'Modifier' : 'Sauvegarder'}</button>
                     </div>

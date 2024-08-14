@@ -16,6 +16,7 @@ export function FormClient() {
     const [qtes, setQtes] = useState({});
     const [command, setCommand] = useState([]);
     const [commands, setCommands] = useState([]);
+    const [etat, setEtat] = useState({'enCours':false,'termine':false,'paye':false})
 
     const handleClear = () => {
         setTelephone('')
@@ -64,7 +65,7 @@ export function FormClient() {
 
     useEffect(() => {
         if (client && orders.length > 0) {
-            setClientOrders([...clientOrders, { orders: orders, client: client, etat: false }])
+            setClientOrders([...clientOrders, { orders: orders, client: client}])
         }
     }, [client, orders])
 
@@ -73,7 +74,7 @@ export function FormClient() {
             const currentDate = new Date()
             const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
             if (command.length > 0 ) { 
-                const order = {qtes: qtes, date: formattedDate, orders: command, client: customers, etat: false }
+                const order = {qtes: qtes, date: formattedDate, orders: command, client: customers, etat: etat }
                 postOrder(order)
                     .then(response => {
                         setClientOrders([...commands, response.data]);

@@ -39,50 +39,6 @@ export function Catalog() {
   const goToOrderDetails = () => {
     navigate('/client/commande', { state:{commandes} });
   };
-
-  const addBerger = (berg) => {
-    if (berg.id) {
-      axios.put(`http://localhost:8000/burgers/${berg.id}`, berg)
-      .then(response => {
-        setBergers(bergers.map(b => b.id === berg.id ? response.data : b));
-      });    } else {
-      const newId = bergers.length > 0 ? Math.max(...bergers.map(b => b.id)) + 1 : 1;
-      const bergerWithId = { ...berg, id: newId };
-      postBerger(bergerWithId)
-      .then(response =>{
-        setBergers([...bergers,response.data]);
-        });
-    }
-    setBerger(null);
- }
-
- const handleArchive = (id) => {
-  Swal.fire({
-    title: "Voulez-vous supprimer?",
-    text: "You won't be able to revert this!",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Oui, Supprime le"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      Swal.fire({
-        title: "Supprimé !",
-        text: "votre fichier a été supprimé",
-        icon: "success"
-      });
-      const filterBergers = bergers.filter(berger => berger.id != id)
-      setBergers(filterBergers)
-    } 
-  });
-};
-  
-  const handleUpdate = (id)=>{
-    const filterBerger = bergers.filter(berger => berger.id == id)
-    setBerger(filterBerger);
-  }
-   console.log(bergers);
    
     return<>
     <Nav/>

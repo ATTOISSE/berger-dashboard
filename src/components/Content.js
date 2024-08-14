@@ -4,6 +4,7 @@ import { FormBerger } from './admin/bergers/create';
 import { ListBerger } from './admin/bergers';
 import { Listclient } from './admin/clientList';
 import { Statistic } from './admin/statistic/statistic';
+import { Orders } from './admin/commandes';
 
 function Content() {
   return (
@@ -11,7 +12,7 @@ function Content() {
       <Routes>
         <Route path="/add-berger" element={<FormBerger />} />
         <Route path="/list-berger" element={<ListBerger />} />
-        <Route path="/orders" element={<h2>Commandes</h2>} />
+        <Route path="/orders" element={<Orders />} />
         <Route path="/clients" element={<Listclient />} />
         <Route path="/stats" element={<Statistic />} />
         <Route path="/" element={

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { postOrder } from "../../services/orderService";
 import { Nav } from "../../nav";
 
 export function OrdersClient() {
@@ -15,7 +14,6 @@ export function OrdersClient() {
     const [customers, setCustomers] = useState(null);
     const [qtes, setQtes] = useState({});
     const [command, setCommand] = useState([]);
-    const [etat, setEtat] = useState(false);
 
     useEffect(() => {
         if (Array.isArray(clientOrders) && clientOrders.length > 0) {
@@ -41,20 +39,6 @@ export function OrdersClient() {
             setCommand([...allCommandsSet]);
             setQtes(allQuantities);
             setCustomers(customerData);
-        }
-    }, [clientOrders]);
-
-    useEffect(() => {
-        if (etat) {
-            setClientOrders(prevClientOrders =>
-                prevClientOrders.map(order => ({ ...order, etat: true }))
-            );
-        }
-    }, [etat]);
-
-    useEffect(() => {
-        if (clientOrders.length > 0) {
-            console.log(clientOrders);
         }
     }, [clientOrders]);
 

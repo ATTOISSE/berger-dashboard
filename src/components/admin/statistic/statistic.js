@@ -39,7 +39,7 @@ export const Statistic = () => {
                     </div>
                 </div>
                 <div className="card bg-info mb-3 col-md-2 mx-4 p-0 text-white " style={{ maxWidth: '18rem', border: 'none', }}>
-                    <h4 className="card-header bg-success text-center"> Validées</h4>
+                    <h4 className="card-header bg-success text-center">Terminer</h4>
                     <div className="card-body">
                         <h1 className='text-center text-dark'>{stats.valide}</h1>
                     </div>

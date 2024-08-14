@@ -17,7 +17,7 @@ export function Listclient() {
 
     return (
         <div className=" mt-4 ">
-            <table className="table table-responsive table-dark">
+            <table className="table table-responsive">
                 <thead>
                     <tr key="">
                         <th>Nom</th>

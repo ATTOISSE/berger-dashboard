@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 // import { useOrderStats } from "../statistic/provider";
 import Swal from 'sweetalert2';
 import { Nav } from "../../nav";
+import { useOrderStats } from "../admin/statistic/provider";
 
 export function OrderDetails() {
     const location = useLocation();
@@ -16,7 +17,7 @@ export function OrderDetails() {
             return acc;
         }, {})
     );
-    //   const {incrementStat} = useOrderStats()
+    const {incrementStat} = useOrderStats()
 
     const navigate = useNavigate()
     const goToOrders = () => {
@@ -91,6 +92,7 @@ export function OrderDetails() {
                     text: "votre produit a été annulé",
                     icon: "success"
                 });
+                incrementStat('annule')
                 setCommandes([])
             }
         });
